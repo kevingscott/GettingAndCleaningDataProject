@@ -53,4 +53,4 @@ full_data_only_sd_or_mean$Activity <- sapply(full_data$Activity,FUN=get_activity
 full_data_melt <- melt(full_data_only_sd_or_mean,id=c("Subject","Activity"))
 sub_Act_Summary <- dcast(full_data_melt,Subject+Activity ~ variable, mean)
 
-write.table(sub_Act_Summary,file="data_by_subject_activity.csv",row.names=FALSE)
+write.table(sub_Act_Summary,file="data_by_subject_activity.txt",row.names=FALSE)
